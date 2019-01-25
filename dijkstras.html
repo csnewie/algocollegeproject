@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel = "stylesheet" type = "text/css" href = "dijkstras.css" />
+  
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src = "js/index.js"></script>
+    <script src = "js/main.js"></script>
+
+    <link rel = "stylesheet" type = "text/css" href = "main.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <title>Test</title>
+    <style>
+    #mainpart{
+        margin-top: 0px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+
+<body>
+<div id = "mainnav">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Analysis of Algorithms</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="insertion.html">Introduction</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Divide and Conquer</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link " href="dijkstras.html">Greedy Method</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link " href="#">Backtracking</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link " href="#">Branch and Bound</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div id = "nabar">
+    <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+            <a class="nav-link text-dark activea" href="dijkstras.html">Dijkstra's Algo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Knapsack Problem</a>
+        </li>
+    </ul>
+    </div>
+
+<div>
+    <div id="left-bar"></div>
+    <div id="right-bar"></div>
+    <div id="maintop">
+            Dijkstra's algorithm solves the single-source shortest-path problem when all edges have non-negative weights. It is a greedy algorithm and similar to Prim's algorithm. Algorithm starts at the source vertex, s, it grows a tree, T, that ultimately spans all vertices reachable from S. Vertices are added to T in order of distance i.e., first S, then the vertex closest to S, then the next closest, and so on. Following implementation assumes that graph G is represented by adjacency lists.
+    </div>
+
+    <div id="mainpart">
+            <script src="js/main.js"></script>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card bg-dark text-white" id="sidebar">
+                        <div class="card-header cardtitle">Graph Editor</div>
+                        <div class="card-body">
+                            Add Node:<br>
+                            <input type="text" id="nodename" name="nodename" placeholder="Node name">
+                            <input type="button" id="addnodes" value="Add Node" onclick="newNode()"><br><br>
+                            Add Edge: <br>
+                            Node 1: <input type="text" id="node1" name="node1" placeholder="Node name"><br> 
+                            Node 2: <input type="text" id="node2" name="node2" placeholder="Node name"><br>
+                            Weight: <input type="text" id="weight" name="weight" placeholder="Weight of edge"><br>
+                            <input type="button" id="addedges" value="Add Edge" onclick="newEdge()">
+                            <input type="button" id="clear" value="Clear Graph" onclick="canvasClear()">
+                            <input type="button" id="dij" value="Dijskrta's Algo" onclick="startSim()">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div id="simulation"></div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="table"></div>
+                        </div>
+                    </div>
+                    <div id="srcout"></div>
+                    <div class="w3-container" id="canvas">
+                    </div>
+                </div>
+            
+            </div>
+    </div>
+    <div id="bottom-bar"></div>
+</div>
+</body>
+
+</html>
