@@ -1,2 +1,4 @@
 # algocollegeproject
-A collection of simulations for algorithms
+A working prototype for a collection of simulations for algorithms
+
+https://mphis.github.io/algocollegeproject/
